@@ -1,4 +1,4 @@
-package member.repository;
+package com.cojar.market.member.repository;
 import org.springframework.stereotype.Repository;
 
 @Repository

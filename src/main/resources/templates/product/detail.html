@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html layout:decorate="~{/layout/layout}">
+<section layout:fragment="content" class="section-prod-list">
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                상품상세정보
+            </div>
+
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                    <img class="t-w-full t-max-w-[300px]" src="https://i.imgur.com/PVsCFy1.png" alt="상품이미지">
+                </li>
+                <li class="list-group-item">
+                    번호 : <span class="badge bg-primary">123</span>
+                </li>
+                <li class="list-group-item">
+                    등록날짜 : <span class="badge bg-secondary">2023-03-11</span>
+                </li>
+                <li class="list-group-item">
+                    수정날짜 : <span class="badge bg-secondary">2023-03-11</span>
+                </li>
+                <li class="list-group-item">
+                    상품명 : <span class="t-font-bold">띵강의</span>
+                </li>
+                <li class="list-group-item">
+                    가격 : <span class="t-font-bold">1</span>원
+                </li>
+                <li class="list-group-item">
+                    마켓 : <span class="badge bg-primary">22</span>
+                </li>
+            </ul>
+
+        </div>
+
+        <div class="card t-mt-[30px]">
+            <div class="card-header">
+                질문등록
+            </div>
+
+            <div class="card-body">
+                <form method="POST" action="#">
+                    <!--     폼 내용      -->
+                </form>
+                <a href="#">로그인</a> 후 이용해주세요.
+            </div>
+        </div>
+
+        <div class="card t-mt-[30px]">
+            <div class="card-header">
+                질문리스트
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                    <span class="badge bg-secondary">질문 ID</span>
+                    질문 내용
+                    <a href="#" class="btn btn-sm btn-warning"
+                       onclick="if ( confirm('정말 삭제하시겠습니까?') == false ) return false;">삭제</a>
+                    <a href="#"
+                       class="btn btn-sm btn-secondary">수정</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+</html>

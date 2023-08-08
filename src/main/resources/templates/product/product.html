@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html layout:decorate="~{/layout/layout}">
+<section layout:fragment="content" class="section-prod-list">
+    <div class="container">
+        <h1 class="t-text-[1.5rem] t-font-bold">강의리스트</h1>
+        <ul class="t-grid t-grid-cols-1 sm:t-grid-cols-2 md:t-grid-cols-3 lg:sm:t-grid-cols-4 t-gap-[20px] t-mt-3">
+            <li  th:each="product, loop  : ${productList}" class="t-flex t-flex-col">
+                <a data-before="VIEW MORE" href="#"
+                   class="">
+                    <img class="t-block t-w-full" src="https://i.imgur.com/PVsCFy1.png" alt="">
+                </a>
+                <a th:text="${product.name}" class="t-text-center t-mt-2" href="#">
+                </a>
+                <a th:text="${product.price}+원" class="t-text-center t-mt-2" href="#">
+                </a>
+            </li>
+        </ul>
+    </div>
+</section>
+</html>
