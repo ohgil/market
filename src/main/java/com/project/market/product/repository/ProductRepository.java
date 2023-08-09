@@ -1,6 +1,6 @@
-package com.cojar.market.product.repository;
+package com.project.market.product.repository;
 
-import com.cojar.market.product.entity.Product;
+import com.project.market.product.entity.Product;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

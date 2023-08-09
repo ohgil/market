@@ -1,4 +1,4 @@
-package com.cojar.market.product.entity;
+package com.project.market.product.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
