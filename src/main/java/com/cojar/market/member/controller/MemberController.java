@@ -9,15 +9,13 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @RequestMapping("/member")
 public class MemberController {
     @GetMapping("/login")
-    @ResponseBody
     public String login() {
-        return "로그인 페이지 입니다";
+        return "/member/login";
     }
 
     @GetMapping("/join")
-    @ResponseBody
     public String join() {
-        return "회원가입 페이지 입니다";
+        return "/member/join";
     }
 
 }

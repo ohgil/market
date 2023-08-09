@@ -14,6 +14,8 @@ import java.time.LocalDateTime;
 import static jakarta.persistence.GenerationType.IDENTITY;
 
 @Entity
+@Getter
+@Setter
 public class Member {
     @Id
     @GeneratedValue(strategy = IDENTITY)
