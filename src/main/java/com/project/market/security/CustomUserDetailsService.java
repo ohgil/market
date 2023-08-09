@@ -1,7 +1,7 @@
-package com.cojar.market.security;
+package com.project.market.security;
 
-import com.cojar.market.member.entity.Member;
-import com.cojar.market.member.repository.MemberRepository;
+import com.project.market.member.entity.Member;
+import com.project.market.member.repository.MemberRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
