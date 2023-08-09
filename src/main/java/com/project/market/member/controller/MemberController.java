@@ -1,14 +1,13 @@
-package com.cojar.market.member.controller;
+package com.project.market.member.controller;
 
-import com.cojar.market.member.Service.MemberService;
-import com.cojar.market.member.form.MemberForm;
+import com.project.market.member.Service.MemberService;
+import com.project.market.member.form.MemberForm;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 @RequiredArgsConstructor

@@ -1,7 +1,7 @@
-package com.cojar.market.member.Service;
+package com.project.market.member.Service;
 
-import com.cojar.market.member.entity.Member;
-import com.cojar.market.member.repository.MemberRepository;
+import com.project.market.member.entity.Member;
+import com.project.market.member.repository.MemberRepository;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;

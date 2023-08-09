@@ -1,4 +1,4 @@
-package com.cojar.market.member.form;
+package com.project.market.member.form;
 
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotEmpty;

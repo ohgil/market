@@ -1,5 +1,5 @@
-package com.cojar.market.member.repository;
-import com.cojar.market.member.entity.Member;
+package com.project.market.member.repository;
+import com.project.market.member.entity.Member;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

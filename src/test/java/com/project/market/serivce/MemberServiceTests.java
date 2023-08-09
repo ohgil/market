@@ -1,7 +1,6 @@
-package com.cojar.market.serivce;
+package com.project.market.serivce;
 
-import com.cojar.market.member.Service.MemberService;
-import com.cojar.market.product.Service.ProductService;
+import com.project.market.member.Service.MemberService;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
