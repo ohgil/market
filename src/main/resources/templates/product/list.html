@@ -9,9 +9,9 @@
                    class="">
                     <img class="t-block t-w-full" src="https://i.imgur.com/PVsCFy1.png" alt="">
                 </a>
-                <a th:text="${product.name}" class="t-text-center t-mt-2" href="#">
+                <a th:text="${product.name}" class="t-text-center t-mt-2" th:href="@{|/product/detail/${product.id}|}">
                 </a>
-                <a th:text="${product.price}+원" class="t-text-center t-mt-2" href="#">
+                <a th:text="${product.price}+원" class="t-text-center t-mt-2" th:href="@{|/product/detail/${product.id}|}">
                 </a>
             </li>
         </ul>

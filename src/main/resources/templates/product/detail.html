@@ -21,10 +21,10 @@
                     수정날짜 : <span class="badge bg-secondary">2023-03-11</span>
                 </li>
                 <li class="list-group-item">
-                    상품명 : <span class="t-font-bold">띵강의</span>
+                    상품명 : <span th:text="${product.name}" class="t-font-bold"></span>
                 </li>
                 <li class="list-group-item">
-                    가격 : <span class="t-font-bold">1</span>원
+                    가격 : <span  th:text="${product.price}" class="t-font-bold"></span>원
                 </li>
                 <li class="list-group-item">
                     마켓 : <span class="badge bg-primary">22</span>
