@@ -13,14 +13,25 @@ public class MemberServiceTests {
 
     @Autowired
     private MemberService memberService;
+
     @Test
     @DisplayName("회원가입")
-    void t1() {
+    void t1 () {
         String username = "user1";
         String password = "1234";
         String email = "test@test.com";
         String nickname = "tester";
 
-        memberService.join(username, password,email, nickname);
+        memberService.join(username, password, email, nickname);
+    }
+
+    void t2 () {
+        String username = "user1";
+        String password = "1234";
+        String email = "test@test.com";
+        String nickname = "tester";
+
+        memberService.join(username, password, email, nickname);
+
     }
 }
