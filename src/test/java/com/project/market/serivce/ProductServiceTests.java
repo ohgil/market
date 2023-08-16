@@ -1,6 +1,6 @@
 package com.project.market.serivce;
 
-import com.project.market.product.Service.ProductService;
+import com.project.market.product.service.ProductService;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

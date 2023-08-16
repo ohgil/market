@@ -1,4 +1,4 @@
-package com.project.market.product.Service;
+package com.project.market.product.service;
 
 import com.project.market.product.entity.Product;
 import com.project.market.product.repository.ProductRepository;

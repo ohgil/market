@@ -1,6 +1,6 @@
 package com.project.market.member.controller;
 
-import com.project.market.member.Service.MemberService;
+import com.project.market.member.service.MemberService;
 import com.project.market.member.form.MemberForm;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;

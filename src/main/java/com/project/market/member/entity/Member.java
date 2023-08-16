@@ -1,7 +1,7 @@
 package com.project.market.member.entity;
 
 import com.project.market.base.entity.BaseEntity;
-import com.project.market.question.Question;
+import com.project.market.question.entity.Question;
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

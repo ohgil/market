@@ -1,10 +1,12 @@
-package com.project.market.member.Service;
+package com.project.market.member.service;
 
 import com.project.market.member.entity.Member;
 import com.project.market.member.repository.MemberRepository;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+
+import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
@@ -21,5 +23,9 @@ public class MemberService {
         memberRepository.save(member);
 
         return member;
+    }
+
+    public Optional<Member> findByUsername(String username) {
+        return memberRepository.findByUsername(username);
     }
 }

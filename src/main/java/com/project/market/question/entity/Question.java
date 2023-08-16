@@ -1,4 +1,4 @@
-package com.project.market.question;
+package com.project.market.question.entity;
 
 import com.project.market.base.entity.BaseEntity;
 import com.project.market.member.entity.Member;

@@ -1,6 +1,6 @@
 package com.project.market.product.controller;
 
-import com.project.market.product.Service.ProductService;
+import com.project.market.product.service.ProductService;
 import com.project.market.product.entity.Product;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
