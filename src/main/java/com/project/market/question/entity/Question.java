@@ -12,7 +12,7 @@ import lombok.Setter;
 @Setter
 @Entity
 public class Question extends BaseEntity {
-    private String title;
+
     private String content;
 
     @ManyToOne

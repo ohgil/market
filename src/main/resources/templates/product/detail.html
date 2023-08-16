@@ -39,12 +39,13 @@
             </div>
 
             <div class="card-body">
-                <form sec:authorize="isAuthenticated()" action="@{/question/create}" method="POST" >
+                <form
+                        sec:authorize="isAuthenticated()"
+                        th:action="@{|/question/create/${product.id}|}"
+                        method="POST"
+                >
+
                     <div class="mb-3">
-                        <div class="mb-3">
-                            <label for="subject" class="form-label">제목</label>
-                            <input type="text" name="subject" id="subject" class="form-control">
-                        </div>
                         <div class="mb-3">
                             <label for="content" class="form-label">내용</label>
                             <textarea name="content" id="content" class="form-control" rows="10"></textarea>

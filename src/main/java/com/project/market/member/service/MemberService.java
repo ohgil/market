@@ -25,7 +25,13 @@ public class MemberService {
         return member;
     }
 
-    public Optional<Member> findByUsername(String username) {
-        return memberRepository.findByUsername(username);
+    public Member findByUsername(String username) {
+        Optional<Member> member = memberRepository.findByUsername(username);
+
+        if (member.isPresent()) {
+            return member.get();
+        } else {
+            throw new RuntimeException("member not found");
+        }
     }
 }
