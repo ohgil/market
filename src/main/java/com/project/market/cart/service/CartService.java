@@ -8,6 +8,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Service
 @RequiredArgsConstructor
@@ -20,5 +21,8 @@ public class CartService {
         c.setCreateDate(LocalDateTime.now());
 
         this.cartRepository.save(c);
+    }
+    public List<Cart> getList(Member member) {
+        return this.cartRepository.findByMember(member);
     }
 }
