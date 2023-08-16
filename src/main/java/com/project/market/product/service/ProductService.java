@@ -3,6 +3,9 @@ package com.project.market.product.service;
 import com.project.market.product.entity.Product;
 import com.project.market.product.repository.ProductRepository;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
@@ -22,8 +25,9 @@ public class ProductService {
         this.productRepository.save(p);
     }
 
-    public List<Product> getList() {
-        return this.productRepository.findAll();
+    public Page<Product> getList(int page) {
+        Pageable pageable = PageRequest.of(page, 8);
+        return this.productRepository.findAll(pageable);
     }
 
     public Product getProduct(Long id) {
