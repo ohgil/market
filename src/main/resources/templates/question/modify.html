@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html layout:decorate="~{/layout/layout}">
+<section layout:fragment="content" class="section-prod-question-modify">
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                상품상세정보
+            </div>
+
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                    <img class="t-w-full t-max-w-[300px]" src="https://i.imgur.com/PVsCFy1.png" alt="상품사진">
+                </li>
+                <li class="list-group-item">
+                    번호 : <span th:text="${question.product.id}" class="badge bg-primary"></span>
+                </li>
+                <li class="list-group-item">
+                    상품명 : <span th:text="${question.product.name}" class="t-font-bold"></span>
+                </li>
+                <li class="list-group-item">
+                    가격 : <span th:text="${question.product.price}" class="t-font-bold"></span>원
+                </li>
+                <!--  TODO: 마켓정보 추가      -->
+                <!--        <li class="list-group-item">-->
+                <!--          마켓 : <span th:text="" class="badge bg-primary"></span>-->
+                <!--        </li>-->
+                <li class="list-group-item">
+                    등록날짜 : <span th:text="${#temporals.format(question.product.createDate, 'yyyy-MM-dd HH:mm')}" class="badge bg-secondary"></span>
+                </li>
+                <li th:if="${question.product.modifyDate != null}"class="list-group-item">
+                    수정날짜 : <span th:text="${#temporals.format(question.product.modifyDate, 'yyyy-MM-dd HH:mm')}" class="badge bg-secondary"></span>
+                </li>
+            </ul>
+        </div>
+
+        <div class="card t-mt-5">
+            <div class="card-header">
+                상품질문수정
+            </div>
+
+            <div class="card-body">
+                <form th:action="@{|/question/modify/${question.id}|}" method="POST">
+                    <div class="mb-3">
+                        <label for="content" class="form-label">내용</label>
+                        <textarea  th:text="${question.content}" id="content" name="content" class="form-control" rows="10"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary my-2">질문수정</button>
+                    <a  th:href="@{|/product/detail/${question.product.id}|}" class="btn btn-light my-2">취소</a>
+                </form>
+                <script>
+          let $lastForm = $('form').last();
+          $(window).on('load', function() {
+              $(window).scrollTop($lastForm.offset().top);
+          });
+        </script>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+</html>

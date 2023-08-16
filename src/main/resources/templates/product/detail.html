@@ -61,10 +61,10 @@
                 <li th:each="question : ${product.questionList} " class="list-group-item">
                     <span th:text="${question.id}" class="badge bg-secondary"></span>
                     <span th:text="${question.content}"></span>
+                    <a th:href="@{|/question/modify/${question.id}|}"
+                       class="btn btn-sm btn-primary">수정</a>
                     <a href="#" class="btn btn-sm btn-warning"
                        onclick="if ( confirm('정말 삭제하시겠습니까?') == false ) return false;">삭제</a>
-                    <a href="#"
-                       class="btn btn-sm btn-secondary">수정</a>
                 </li>
             </ul>
         </div>
