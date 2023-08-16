@@ -27,11 +27,11 @@ public class ProductService {
         this.productRepository.save(p);
     }
 
-    public Page<Product> getList(int page) {
+    public Page<Product> getList(int page, String kw) {
         List<Sort.Order> sorts = new ArrayList<>();
         sorts.add(Sort.Order.desc("createDate"));
         Pageable pageable = PageRequest.of(page, 8, Sort.by(sorts));
-        return this.productRepository.findAll(pageable);
+        return this.productRepository.findAllByKeyword(kw, pageable);
     }
 
     public Product getProduct(Long id) {
