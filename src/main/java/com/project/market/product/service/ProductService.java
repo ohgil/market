@@ -26,10 +26,11 @@ public class ProductService {
     private String genFileDirPath;
 
     public void create(String name, String description, int price, MultipartFile thumbnail) {
-        String thumbnailRelPath = genFileDirPath;
+        String thumbnailRelPath = "product/" + UUID.randomUUID().toString() + ".jpg";
+        File thumbnailFile = new File (genFileDirPath + "/" + thumbnailRelPath);
 
         try {
-            thumbnail.transferTo(new File(genFileDirPath + "/" + UUID.randomUUID().toString() + ".jpg"));
+            thumbnail.transferTo(thumbnailFile);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

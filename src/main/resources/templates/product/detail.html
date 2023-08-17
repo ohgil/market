@@ -9,19 +9,23 @@
             <ul class="list-group list-group-flush">
                 <li class="list-group-item">
                 <li class="list-group-item">
-                    <img class="t-w-full t-max-w-[300px] t-rounded" src="https://i.imgur.com/PVsCFy1.png" alt="상품이미지">
-                </li>
+                <img class="t-w-full t-max-w-[300px] t-rounded" th:src="@{|/gen/${product.thumbnailImg}|}" alt="상품이미지">
+            </li>
                 <li class="list-group-item">
                     <span class="t-w-16 t-inline-block">번호</span>
-                    <span th:text="${product.id}" class="badge bg-primary">{{product.id}}</span>
+                    <span th:text="${product.id}" class="badge bg-primary"></span>
                 </li>
                 <li class="list-group-item">
                     <span class="t-w-16 t-inline-block">상품명</span>
                     <span th:text="${product.name}" class="t-font-bold"></span>
                 </li>
                 <li class="list-group-item">
+                    <span class="t-w-16 t-inline-block">설명</span>
+                    <span th:text="${product.description}" class="t-font-bold"></span>
+                </li>
+                <li class="list-group-item">
                     <span class="t-w-16 t-inline-block">가격</span>
-                    <span th:text="${product.price}" class="t-font-bold">{{product.sale_price|intcomma}}</span>원
+                    <span th:text="${product.price}" class="t-font-bold"></span>원
                 </li>
                 <!--  TODO: 마켓정보 추가      -->
                 <!--                <li class="list-group-item">-->
