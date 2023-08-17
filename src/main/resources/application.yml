@@ -30,7 +30,4 @@ spring:
         default_batch_fetch_size: 100
         show_sql: true
         format_sql: true
-
-use_sql_comments: true
-custom:
-  genFileDirPath: C:\Users\OGH\genFile
+        use_sql_comments: true
