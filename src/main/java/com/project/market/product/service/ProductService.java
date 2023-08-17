@@ -19,9 +19,10 @@ import java.util.Optional;
 public class ProductService {
     private final ProductRepository productRepository;
 
-    public void create(String name, int price) {
+    public void create(String name, String description, int price) {
         Product product = Product.builder()
                 .name(name)
+                .description(description)
                 .price(price)
                 .build();
         this.productRepository.save(product);
