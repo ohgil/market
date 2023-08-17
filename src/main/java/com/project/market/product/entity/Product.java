@@ -17,7 +17,7 @@ import java.util.List;
 @ToString
 public class Product extends BaseEntity {
     private String name;
-    private String Description;
+    private String description;
     private int price;
     private int hitCount;
     private String isActive;
