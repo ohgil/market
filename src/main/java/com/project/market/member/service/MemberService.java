@@ -15,11 +15,12 @@ public class MemberService {
     private final PasswordEncoder passwordEncoder;
     public Member join(String username, String password, String email, String nickname) {
 
-        Member member = new Member();
-        member.setUsername(username);
-        member.setPassword(passwordEncoder.encode(password));
-        member.setEmail(email);
-        member.setNickname(nickname);
+        Member member = Member.builder()
+                .username(username)
+                .password(passwordEncoder.encode(password))
+                .email(email)
+                .nickname(nickname)
+                .build();
         memberRepository.save(member);
 
         return member;
