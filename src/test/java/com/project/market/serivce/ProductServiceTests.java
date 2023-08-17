@@ -16,7 +16,8 @@ public class ProductServiceTests {
         for (int i = 1; i <= 200; i++) {
             String name = String.format("테스트 상품:[%03d]", i);
             int price = 1;
-            this.productService.create(name, price);
+            String description = "테스트 설명:[%03d]";
+//            this.productService.create(name, description, price);
         }
     }
 }
