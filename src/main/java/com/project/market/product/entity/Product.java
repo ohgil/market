@@ -8,11 +8,12 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
+import lombok.experimental.SuperBuilder;
 
 import java.util.List;
 
 @Entity
-@Setter
+@SuperBuilder
 @Getter
 @ToString
 public class Product extends BaseEntity {

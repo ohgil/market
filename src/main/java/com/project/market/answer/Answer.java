@@ -5,11 +5,9 @@ import com.project.market.member.entity.Member;
 import com.project.market.question.entity.Question;
 import jakarta.persistence.Entity;
 import jakarta.persistence.OneToOne;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.experimental.SuperBuilder;
 
-@Getter
-@Setter
+@SuperBuilder
 @Entity
 public class Answer extends BaseEntity {
 

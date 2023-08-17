@@ -58,11 +58,12 @@ public class OAuth2UserService extends DefaultOAuth2UserService {
                         email = (String) attributesKakaoAcount.get("email");
                     }
 
-                    member = new Member();
-                    member.setEmail(email);
-                    member.setUsername(username);
-                    member.setNickname(nickname);
-                    member.setPassword("");
+                    member = Member.builder()
+                            .email(email)
+                            .username(username)
+                            .nickname(nickname)
+                            .password("")
+                            .build();
                     memberRepository.save(member);
                 }
             }

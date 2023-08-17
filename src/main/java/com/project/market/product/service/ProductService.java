@@ -20,11 +20,11 @@ public class ProductService {
     private final ProductRepository productRepository;
 
     public void create(String name, int price) {
-        Product p = new Product();
-        p.setName(name);
-        p.setPrice(price);
-        p.setCreateDate(LocalDateTime.now());
-        this.productRepository.save(p);
+        Product product = Product.builder()
+                .name(name)
+                .price(price)
+                .build();
+        this.productRepository.save(product);
     }
 
     public Page<Product> getList(int page, String kw) {

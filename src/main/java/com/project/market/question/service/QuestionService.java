@@ -18,12 +18,12 @@ public class QuestionService {
 
 
     public void create(Product product, Member member, String content) {
-        Question q = new Question();
-        q.setProduct(product);
-        q.setMember(member);
-        q.setContent(content);
-        q.setCreateDate(LocalDateTime.now());
-        this.questionRepository.save(q);
+        Question question = Question.builder()
+                .member(member)
+                .product(product)
+                .content(content)
+                .build();
+        this.questionRepository.save(question);
 
     }
 
@@ -37,9 +37,11 @@ public class QuestionService {
     }
 
     public void modify(Question question, String content) {
-        question.setContent(content);
-        question.setModifyDate(LocalDateTime.now());
-        this.questionRepository.save(question);
+        Question modifyQuestion =
+                question.toBuilder()
+                        .content(content)
+                        .build();
+        this.questionRepository.save(modifyQuestion);
     }
     public void delete(Question question) {
         this.questionRepository.delete(question);
