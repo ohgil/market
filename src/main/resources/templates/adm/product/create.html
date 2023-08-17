@@ -7,10 +7,11 @@
 <body>
 <h1>컨텐츠 생성 페이지</h1>
 
-<form th:action="@{/adm/product/create}" method="post">
-    제목 : <input type="text" name="name">
-    내용 : <input type="text" name="description">
-    가격 : <input type="number" name="price">
+<form th:action="@{/adm/product/create}" method="post"  enctype="multipart/form-data">
+    제목 : <input type="text" name="name"> <br>
+    내용 : <input type="text" name="description"> <br>
+    가격 : <input type="number" name="price"> <br>
+    썸네일: <input type="file" name="thumbnail" accept="img/png, image/gif, image/jpeg"> <br>
     <button type="submit">전송</button>
 </form>
 

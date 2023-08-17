@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.multipart.MultipartFile;
 
 @Controller
 @RequiredArgsConstructor
@@ -22,8 +23,11 @@ public class AdmProductController {
     }
 
     @PostMapping("/create")
-    public String createContent(@RequestParam String name, @RequestParam String description, @RequestParam int price) {
-        this.productService.create(name, description, price);
+    public String createContent(
+            @RequestParam String name, @RequestParam String description, @RequestParam int price,
+            MultipartFile thumbnail
+    ) {
+        this.productService.create(name, description, price, thumbnail);
 
         return "adm/product/create";
     }

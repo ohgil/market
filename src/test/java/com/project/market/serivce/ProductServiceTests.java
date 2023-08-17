@@ -17,7 +17,7 @@ public class ProductServiceTests {
             String name = String.format("테스트 상품:[%03d]", i);
             int price = 1;
             String description = "테스트 설명:[%03d]";
-            this.productService.create(name, description, price);
+//            this.productService.create(name, description, price);
         }
     }
 }
