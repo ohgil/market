@@ -26,8 +26,11 @@ public class ProductService {
     private String genFileDirPath;
 
     public void create(String name, String description, int price, MultipartFile thumbnail) {
+
         String thumbnailRelPath = "product/" + UUID.randomUUID().toString() + ".jpg";
-        File thumbnailFile = new File (genFileDirPath + "/" + thumbnailRelPath);
+        File thumbnailFile = new File(genFileDirPath + "/" + thumbnailRelPath);
+
+        thumbnailFile.mkdir();
 
         try {
             thumbnail.transferTo(thumbnailFile);
@@ -48,6 +51,10 @@ public class ProductService {
         sorts.add(Sort.Order.desc("createDate"));
         Pageable pageable = PageRequest.of(page, 8, Sort.by(sorts));
         return this.productRepository.findAllByKeyword(kw, pageable);
+    }
+
+    public List<Product> getList() {
+        return this.productRepository.findAll();
     }
 
     public Product getProduct(Long id) {

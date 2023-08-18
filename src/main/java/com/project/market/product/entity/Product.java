@@ -1,12 +1,13 @@
 package com.project.market.product.entity;
 
-import com.project.market.base.entity.BaseEntity;
+import com.project.market.base.BaseEntity;
 import com.project.market.cart.entity.Cart;
 import com.project.market.market.Market;
 import com.project.market.question.entity.Question;
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
-import lombok.Setter;
+import lombok.NoArgsConstructor;
 import lombok.ToString;
 import lombok.experimental.SuperBuilder;
 
@@ -14,6 +15,8 @@ import java.util.List;
 
 @Entity
 @SuperBuilder
+@NoArgsConstructor
+@AllArgsConstructor
 @Getter
 @ToString
 public class Product extends BaseEntity {

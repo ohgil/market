@@ -15,5 +15,11 @@
     <button type="submit">전송</button>
 </form>
 
+<ul th:each="product : ${productList}">
+    <li th:text="${product.name}"></li>
+    <li th:text="${product.description}"></li>
+    <li><img th:src="@{|/gen/${product.thumbnailImg}|}" alt="test이미지"></li>
+</ul>
+
 </body>
 </html>

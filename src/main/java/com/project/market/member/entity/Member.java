@@ -1,6 +1,6 @@
 package com.project.market.member.entity;
 
-import com.project.market.base.entity.BaseEntity;
+import com.project.market.base.BaseEntity;
 import com.project.market.cart.entity.Cart;
 import com.project.market.question.entity.Question;
 import jakarta.persistence.CascadeType;
@@ -8,7 +8,6 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.OneToMany;
 import lombok.Getter;
-import lombok.Setter;
 import lombok.experimental.SuperBuilder;
 
 import java.util.List;

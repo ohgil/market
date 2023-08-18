@@ -1,6 +1,6 @@
 package com.project.market.answer;
 
-import com.project.market.base.entity.BaseEntity;
+import com.project.market.base.BaseEntity;
 import com.project.market.member.entity.Member;
 import com.project.market.question.entity.Question;
 import jakarta.persistence.Entity;
