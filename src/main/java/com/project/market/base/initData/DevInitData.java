@@ -17,7 +17,8 @@ public class DevInitData implements BeforeInitData {
             beforeInit();
 
             String password = "{noop}1234";
-            memberService.join("user1", password, "user1@test.com", "user1");
+            memberService.join("admin",  "1234", "admin@test.com", "admin");
+            memberService.join("user1",  "1234", "user1@test.com", "user1");
             memberService.join("user2", password, "user2@test.com", "user2");
             memberService.join("user3", password, "user3@test.com", "user3");
             memberService.join("user4", password, "user4@test.com", "user4");

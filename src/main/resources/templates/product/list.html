@@ -8,11 +8,13 @@
                 <a data-before="VIEW MORE" th:href="@{|/product/detail/${product.id}|}"
                    class="t-relative t-overflow-hidden t-rounded
                    before:t-content-[''] before:t-absolute before:t-inset-0 before:t-bg-[#00000000] group-hover:before:t-bg-[#00000055] before:t-transition-all
-                   after:t-content-[attr(data-before)] after:t-hidden group-hover:after:t-block after:t-no-underline after:t-text-white after:t-border-2 after:t-border-white after:t-border-solid after:t-rounded after:t-p-2 after:t-whitespace-nowrap after:t-absolute after:t-top-[50%] after:t-left-[50%] after:t-translate-y-[-50%] after:t-translate-x-[-50%] after:t-transition-all"
+                   after:t-content-[attr(data-before)] after:t-hidden group-hover:after:t-block after:t-no-underline after:t-text-white after:t-border-2
+                   after:t-border-white after:t-border-solid after:t-rounded after:t-p-2 after:t-whitespace-nowrap after:t-absolute after:t-top-[50%]
+                   after:t-left-[50%] after:t-translate-y-[-50%] after:t-translate-x-[-50%] after:t-transition-all"
                 >
-                    <img class="t-block t-w-full t-transition-all group-hover:t-scale-110 t-relative t--z-50" th:src="@{|/gen/${product.thumbnailImg}|}" alt="섬네일 사진">
+                    <!--                    <img class="t-block t-w-full t-transition-all group-hover:t-scale-110 t-relative t&#45;&#45;z-50" th:src="@{|/gen/${product.thumbnailImg}|}" alt="섬네일 사진">-->
                 </a>
-                <a th:text="${product.name}" class="t-text-center t-mt-2 t-no-underline t-text-black t-italic group-hover:t-underline" th:href="@{|/product/detail/${product.id}|}">
+                <a th:text="${product.title}" class="t-text-center t-mt-2 t-no-underline t-text-black t-italic group-hover:t-underline" th:href="@{|/product/detail/${product.id}|}">
                 </a>
                 <a th:text="@{|\ ${product.price}원|}" class="t-text-center t-mt-2 t-no-underline t-text-gray-400 group-hover:t-text-blue-500" th:href="@{|/product/detail/${product.id}|}">
                     <i class="fas fa-won-sign"></i>

@@ -53,6 +53,11 @@
                             장바구니
                         </a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" sec:authorize="hasAuthority('ADMIN')" href="/adm">
+                            관리자 홈
+                        </a>
+                    </li>
                 </ul>
                 <div class="nav-link" sec:authorize="isAuthenticated()" th:text="@{|${#authentication.name}님 반갑습니다|}"></div>
                 <div class="d-flex">
