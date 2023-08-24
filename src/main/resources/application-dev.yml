@@ -17,4 +17,4 @@ spring:
     hibernate:
       ddl-auto: create
 custom:
-  genFileDirPath: C:\Users\SBS\Pictures\genFile
+  genFileDirPath: C:\Users\OGH\Pictures\genFile

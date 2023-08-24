@@ -21,7 +21,7 @@ import java.util.List;
 @Getter
 @ToString
 public class Product extends BaseEntity {
-    private String name;
+    private String title;
     private String description;
     private int price;
     private int hitCount;
