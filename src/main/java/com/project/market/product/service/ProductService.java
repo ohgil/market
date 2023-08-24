@@ -16,6 +16,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+import java.util.UUID;
 
 @RequiredArgsConstructor
 @Service
@@ -24,17 +25,30 @@ public class ProductService {
     @Value("${custom.genFileDirPath}")
     private String genFileDirPath;
 
-    public void create(String name, String description, int price, MultipartFile thumbnail) {
-        String thumbnailRelPath = genFileDirPath;
+    public void create(String title, String description, int price, MultipartFile thumbnail) {
+
+        String thumbnailRelPath = "product/" + UUID.randomUUID().toString() + ".jpg";
+        File thumbnailFile = new File(genFileDirPath + "/" + thumbnailRelPath);
+
+        thumbnailFile.mkdir();
 
         try {
-            thumbnail.transferTo(new File(genFileDirPath + "/1.jpg"));
+            thumbnail.transferTo(thumbnailFile);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
 
         Product product = Product.builder()
-                .name(name)
+                .title(title)
+                .description(description)
+                .price(price)
+                .build();
+        this.productRepository.save(product);
+    }
+
+    public void create(String title, String description, int price) {
+        Product product = Product.builder()
+                .title(title)
                 .description(description)
                 .price(price)
                 .build();
@@ -46,6 +60,10 @@ public class ProductService {
         sorts.add(Sort.Order.desc("createDate"));
         Pageable pageable = PageRequest.of(page, 8, Sort.by(sorts));
         return this.productRepository.findAllByKeyword(kw, pageable);
+    }
+
+    public List<Product> getList() {
+        return this.productRepository.findAll();
     }
 
     public Product getProduct(Long id) {
